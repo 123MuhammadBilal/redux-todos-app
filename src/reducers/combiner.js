@@ -7,7 +7,6 @@ const onCRUD = (state = currentTask, action) => {
   };
 
   switch (action.type) {
-
     case "onAddTask":
       return [...state, obj];
 
@@ -24,13 +23,14 @@ const onCRUD = (state = currentTask, action) => {
       updateItem.title = action.updateQuery?.query;
       return state;
 
+    case "onApiFetch":
+      return [...state, action.objData?.data];
 
-      case "onClearData": 
-      return []
-        
-        
+    case "onClearData":
+      return [];
+
     default:
       return state;
   }
-}
+};
 export default onCRUD;

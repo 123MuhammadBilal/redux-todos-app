@@ -18,11 +18,21 @@ const onUpdateTask = (id , query) => {
         updateQuery: {query}
     }
 }
+
+const onApiFetch = (data) => {
+    console.log('objData',data)
+    return{
+        type: 'onApiFetch',
+        objData: {data},
+    }
+}
+
 const onClearData = () => {
     return{
         type: 'onClearData',
 
     }
+
 }
 
-export { onAddTask , onDeleteTask , onUpdateTask , onClearData }
+export { onAddTask , onDeleteTask , onUpdateTask , onClearData , onApiFetch }

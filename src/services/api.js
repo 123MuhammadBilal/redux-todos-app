@@ -1,16 +1,6 @@
-import axios from "axios";
-
-const todoApi = () =>{
-    axios({
-        url: `https://jsonplaceholder.typicode.com/todos/1`,
-      })
-        .then((response) => {
-          return response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+const todoApi = (query) =>{
+    return fetch(
+        `https://jsonplaceholder.typicode.com/todos/${query}`
+      );
     }
-
-    console.log("todoApi", todoApi)
-export default todoApi
+export {todoApi}
