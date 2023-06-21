@@ -62,8 +62,7 @@ const List = ({setTargetItem}) => {
                   onClick={(e) => {
                     onDeleteButtonClick(e);
                   }}
-                >
-                  Delete
+                >Delete
                 </Button>
               </Box>
             </ListItem>
